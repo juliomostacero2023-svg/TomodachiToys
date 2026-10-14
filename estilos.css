@@ -1,0 +1,509 @@
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: "Montserrat", sans-serif;
+       background-color: #0A0A14;
+       color: whitesmoke;
+   }
+
+   header {
+       background-color: #4B2A7B;
+       padding: 12px 30px;
+   }
+
+   .contenedor-navbar {
+       max-width: 1200px;
+       margin: auto;
+       display: flex;
+       flex-direction: row;
+       /* logo y menú en la misma línea */
+       justify-content: space-between;
+       /* logo a la izquierda, menú a la derecha */
+       align-items: center;
+       gap: 20px;
+   }
+
+   .contenedor-logo {
+       display: flex;
+       align-items: center;
+       gap: 14px;
+   }
+
+   .contenedor-logo img {
+       width: 55px;
+       height: 55px;
+       object-fit: cover;
+       border-radius: 50%;
+       /* logo redondo */
+   }
+
+   .contenedor-logo h1 {
+       margin: 0;
+       font-size: 32px;
+       font-weight: 700;
+   }
+
+   nav {
+       display: flex;
+       gap: 22px;
+   }
+
+   nav a {
+       color: white;
+       text-decoration: none;
+       transition: color 0.3s;
+   }
+
+   nav a:hover {
+       color: orange;
+   }
+
+   @media (max-width: 700px) {
+       .contenedor-navbar {
+           flex-direction: column;
+           /* en celular, menú debajo del nombre */
+       }
+   }
+
+   main {
+       padding: 30px;
+   }
+
+   .carrusel {
+       width: 100%;
+       height: 400px;
+       max-width: 1200px;
+       overflow: hidden;
+       margin: 30px auto;
+       border-radius: 12px;
+       border: 1px solid rgba(165, 180, 252, 0.25);
+       box-shadow: 0 0 40px rgba(34, 211, 238, 0.12);
+   }
+
+   .contenedor-slide {
+       display: flex;
+       width: 400%;
+       height: 100%;
+       animation: mover 12s infinite;
+   }
+
+   /* Agregando at-rules*/
+   @keyframes mover {
+       0% {
+           transform: translateX(0);
+       }
+
+       20% {
+           transform: translateX(0);
+       }
+
+       25% {
+           transform: translateX(-25%);
+       }
+
+       45% {
+           transform: translateX(-25%);
+       }
+
+       50% {
+           transform: translateX(-50%);
+       }
+
+       70% {
+           transform: translateX(-50%);
+       }
+
+       75% {
+           transform: translateX(-75%);
+       }
+
+       95% {
+           transform: translateX(-75%);
+       }
+
+       100% {
+           transform: translateX(0);
+       }
+   }
+
+   .slide {
+       width: 25%;
+       height: 100%;
+   }
+
+   .slide img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       display: block;
+   }
+
+
+   .inicio {
+       text-align: center;
+       background-color: orange;
+       color: #1A1033;
+       backdrop-filter: blur(12px);
+       padding: 40px;
+       margin-bottom: 30px;
+       border-radius: 10px;
+   }
+
+   .btn-productos {
+       display: inline-block;
+       padding: 12px 25px;
+       margin-top: 20px;
+       background-color: #2B1457;
+       color: white;
+       text-decoration: none;
+       border-radius: 5px;
+   }
+
+   #productos {
+       text-align: center;
+       margin-bottom: 25px;
+   }
+
+   .contenedor-productos {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       gap: 20px;
+   }
+
+   .card {
+       width: 250px;
+       min-height: 500px;
+       padding: 20px;
+       background-color: white;
+       border: 2px solid rgb(3, 3, 73);
+       border-radius: 20px;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+   }
+
+   .card img {
+       width: 100%;
+       height: 230px;
+       object-fit: contain;
+       /* propiedad que controla como se adapta la imagen | cover adapta sin desformar*/
+       border-radius: 5px;
+   }
+
+   .card h3 {
+       color: rgb(3, 3, 73);
+   }
+
+   .card p {
+       margin-top: 5px;
+       color: rgb(91, 91, 160);
+   }
+
+   .precio {
+       font-size: 20px;
+       font-weight: bold;
+   }
+
+   .card button {
+       padding: 10px 20px;
+       margin-top: 15px;
+       background-color: orange;
+       border: none;
+       color: #1A1033;
+       border-radius: 15px;
+       font-weight: bold;
+       cursor: pointer;
+       transition: background-color 0.3s;
+   }
+
+   .seccion-video {
+       max-width: 1000px;
+       margin: 60px auto 20px;
+       padding: 40px;
+       text-align: center;
+       /*background-color: gray; */
+   }
+
+   .seccion-video h2 {
+       font-size: 48px;
+       margin-bottom: 10px;
+   }
+
+   .seccion-video p {
+       margin-bottom: 25px;
+   }
+
+   .contenedor-video {
+       width: 100%;
+       max-width: 850px;
+       margin: auto;
+       overflow: hidden;
+       border-radius: 15px;
+   }
+
+   .contenedor-video video {
+       width: 100%;
+       display: block;
+   }
+
+   footer {
+       background-color: #4B2A7B;
+       text-align: center;
+       padding: 50px;
+       margin-top: 30px;
+   }
+
+   /* ---------- Responsive: página de inicio ---------- */
+   @media (max-width: 700px) {
+       main {
+           padding: 16px;
+       }
+
+       .carrusel {
+           height: 220px;
+           margin: 16px auto;
+       }
+
+       .inicio {
+           padding: 24px 16px;
+       }
+
+       .seccion-video {
+           padding: 20px 16px;
+           margin-top: 30px;
+       }
+
+       .seccion-video h2 {
+           font-size: 28px;
+       }
+
+       footer {
+           padding: 30px 16px;
+       }
+   }
+
+   @media (prefers-reduced-motion: reduce) {
+       .contenedor-slide {
+           animation: none;
+       }
+   }
+
+   /* ==========================================================
+   Formulario.css | Estilos de la página de cotización y contacto
+   Se usa junto con estilos.css (header, nav, footer y tipografía).
+   ========================================================== */
+
+   :root {
+       --fondo: #0A0A14;
+       --morado: #4B2A7B;
+       --morado-oscuro: #2B1457;
+       --azul-oscuro: rgb(3, 3, 73);
+       --naranja: orange;
+       --cian: #22D3EE;
+       --rosa: #FF3D81;
+       --error: #C2185B;
+       --texto-oscuro: #1A1033;
+       --texto-suave: #4A4A8A;
+       --borde-campo: #C9C9F5;
+   }
+
+   /* ---------- Estructura de la página ---------- */
+   .pagina-contacto {
+       max-width: 1100px;
+       margin: 0 auto;
+       padding: 30px 20px;
+       display: grid;
+       grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+       gap: 24px;
+       align-items: start;
+   }
+
+   /* ---------- Panel informativo (franja naranja) ---------- */
+   .contacto-info {
+       background-color: var(--naranja);
+       color: var(--texto-oscuro);
+       padding: 36px 30px;
+       border-radius: 10px;
+   }
+
+   .contacto-info h2 {
+       font-size: 30px;
+       line-height: 1.2;
+       margin-bottom: 14px;
+   }
+
+   .contacto-info p {
+       line-height: 1.6;
+   }
+
+   .contacto-datos {
+       list-style: none;
+       display: grid;
+       gap: 16px;
+       margin-top: 28px;
+       padding-top: 24px;
+       border-top: 2px solid var(--texto-oscuro);
+   }
+
+   .contacto-datos strong {
+       display: block;
+       margin-bottom: 2px;
+   }
+
+   /* ---------- Tarjeta del formulario ---------- */
+   .formulario {
+       background-color: white;
+       color: var(--azul-oscuro);
+       padding: 32px 30px;
+       border: 2px solid var(--azul-oscuro);
+       border-radius: 20px;
+   }
+
+   .formulario h2 {
+       font-size: 26px;
+       margin-bottom: 4px;
+   }
+
+   .formulario-ayuda {
+       color: var(--texto-suave);
+       font-size: 14px;
+       margin-bottom: 24px;
+   }
+
+   /* ---------- Campos ---------- */
+   .fila {
+       display: grid;
+       grid-template-columns: repeat(2, minmax(0, 1fr));
+       gap: 16px;
+   }
+
+   .campo {
+       display: flex;
+       flex-direction: column;
+       gap: 6px;
+       margin-bottom: 18px;
+   }
+
+   .campo label {
+       font-weight: 600;
+       font-size: 14px;
+   }
+
+   .campo small {
+       color: var(--texto-suave);
+       font-size: 12px;
+   }
+
+   .campo input,
+   .campo select,
+   .campo textarea {
+       font: inherit;
+       font-size: 15px;
+       color: var(--texto-oscuro);
+       background-color: white;
+       padding: 11px 12px;
+       border: 2px solid var(--borde-campo);
+       border-radius: 8px;
+       transition: border-color 0.2s;
+   }
+
+   .campo textarea {
+       resize: vertical;
+       min-height: 120px;
+   }
+
+   .campo input::placeholder,
+   .campo textarea::placeholder {
+       color: #8A8AB5;
+   }
+
+   /* Foco visible para quien navega con teclado */
+   .campo input:focus,
+   .campo select:focus,
+   .campo textarea:focus,
+   .campo-check input:focus-visible,
+   .btn-enviar:focus-visible {
+       outline: 3px solid var(--cian);
+       outline-offset: 2px;
+       border-color: var(--morado);
+   }
+
+   /* Campo con dato escrito pero inválido */
+   .campo input:not(:placeholder-shown):invalid,
+   .campo textarea:not(:placeholder-shown):invalid {
+       border-color: var(--error);
+   }
+
+   /* ---------- Casilla de aceptación ---------- */
+   .campo-check {
+       display: flex;
+       align-items: flex-start;
+       gap: 10px;
+       margin-bottom: 24px;
+   }
+
+   .campo-check input {
+       width: 18px;
+       height: 18px;
+       margin-top: 2px;
+       accent-color: var(--morado);
+       flex-shrink: 0;
+   }
+
+   .campo-check label {
+       font-size: 14px;
+       line-height: 1.4;
+   }
+
+   /* ---------- Botón de envío ---------- */
+   .btn-enviar {
+       padding: 12px 30px;
+       background-color: var(--naranja);
+       color: var(--texto-oscuro);
+       border: none;
+       border-radius: 15px;
+       font: inherit;
+       font-weight: bold;
+       cursor: pointer;
+       transition: background-color 0.3s, color 0.3s;
+   }
+
+   .btn-enviar:hover {
+       background-color: var(--rosa);
+       color: white;
+   }
+
+   /* ---------- Celulares y tablets ---------- */
+   @media (max-width: 800px) {
+       .pagina-contacto {
+           grid-template-columns: minmax(0, 1fr);
+           padding: 20px 16px;
+       }
+
+       .fila {
+           grid-template-columns: minmax(0, 1fr);
+           gap: 0;
+       }
+
+       .btn-enviar {
+           width: 100%;
+       }
+   }
+
+   @media (prefers-reduced-motion: reduce) {
+
+       .campo input,
+       .campo select,
+       .campo textarea,
+       .btn-enviar {
+           transition: none;
+       }
+   }

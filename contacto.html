@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | TomodachiToys</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor-navbar">
+            <div class="contenedor-logo">
+                <img src="img/Tomodachitoys.png" alt="Logo de TomodachiToys">
+                <h1>TomodachiToys</h1>
+            </div>
+            <nav>
+                <a href="pagina_ventas.html">Inicio</a>
+                <a href="pagina_ventas.html#productos">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="pagina-contacto">
+
+        <!-- Panel informativo -->
+        <section class="contacto-info">
+            <h2>Cotiza tu figura favorita</h2>
+            <p>
+                Cuéntanos qué figura o coleccionable buscas y te respondemos con
+                el precio y la disponibilidad. También puedes escribirnos para
+                resolver dudas sobre tu pedido.
+            </p>
+            <ul class="contacto-datos">
+                <li>
+                    <strong>Correo</strong>
+                    ventas@tomodachitoys.com
+                </li>
+                <li>
+                    <strong>Cobertura</strong>
+                    Envíos a todo el Perú
+                </li>
+                <li>
+                    <strong>Tiempo de respuesta</strong>
+                    Dentro de las 24 horas hábiles
+                </li>
+            </ul>
+        </section>
+
+        <!-- Formulario -->
+        <section class="formulario">
+            <h2>Escríbenos</h2>
+            <p class="formulario-ayuda">Los campos con * son obligatorios.</p>
+
+            <form id="formClientes" action="#" method="post" novalidate>
+
+                <div class="fila">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre"
+                               placeholder="Ej. Julio Elías" autocomplete="name"
+                               minlength="3" required>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico *</label>
+                        <input type="email" id="correo" name="correo"
+                               placeholder="tucorreo@ejemplo.com" autocomplete="email"
+                               required>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="campo">
+                        <label for="telefono">Celular</label>
+                        <input type="tel" id="telefono" name="telefono"
+                               placeholder="9XXXXXXXX" autocomplete="tel"
+                               pattern="9[0-9]{8}"
+                               title="Ingresa 9 dígitos que empiecen con 9">
+                        <small>Opcional. Solo números, sin espacios.</small>
+                    </div>
+                    <div class="campo">
+                        <label for="consulta">Motivo de tu mensaje *</label>
+                        <select id="consulta" name="consulta" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="cotizacion">Quiero una cotización</option>
+                            <option value="producto">Tengo una pregunta sobre un producto</option>
+                            <option value="mayor">Quiero comprar al por mayor</option>
+                            <option value="otro">Otro motivo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="campo">
+                        <label for="producto">Producto de interés</label>
+                        <select id="producto" name="producto">
+                            <option value="">Aún no lo sé</option>
+                            <option value="gojo">Figura Satoru Gojo - Jujutsu Kaisen</option>
+                            <option value="evangelion">Figura Evangelion Unit-01</option>
+                            <option value="mu-aries">Figura Mu de Aries - Saint Seiya</option>
+                            <option value="otro">Otra figura o coleccionable</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" id="cantidad" name="cantidad"
+                               min="1" max="50" value="1">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Tu mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"
+                              placeholder="Cuéntanos qué buscas: personaje, serie, marca o presupuesto."
+                              minlength="10" maxlength="500" required></textarea>
+                    <small>Entre 10 y 500 caracteres.</small>
+                </div>
+
+                <div class="campo-check">
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">
+                        Acepto que TomodachiToys use mis datos solo para responder mi consulta. *
+                    </label>
+                </div>
+
+                <button type="submit" id="btn-enviar" class="btn-enviar">Enviar mensaje</button>
+            </form>
+
+            <p id="mostrar-mensaje" role="status"></p>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>TomodachiToys &copy; 2026. Todos los derechos reservados.</p>
+        <p>Contacto: ventas@tomodachitoys.com</p>
+    </footer>
+
+    <script type="module" src="js/firebase.js"></script>
+</body>
+</html>
